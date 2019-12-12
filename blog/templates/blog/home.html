@@ -1,8 +1,37 @@
 {% extends "blog/base.html" %}
-{% block content %}
-    {% for post in posts %}
-        <h1>{{ post.title }}</h1>
-        <p>By {{post.author}} on {{post.date_posted}}</p>
-        <p>{{post.content}}</p>
-    {% endfor %}
+    {% block content %}
+    <div class="col-md-7 bg-light p-4 mt-4 rounded float-left">
+        <h2>Posts</h2>
+        <hr>
+        {% for post in posts %}
+            <h3>{{ post.title }}</h1>
+            <p class="text-muted">By <a href="/u/">{{post.author}}</a> on {{post.date_posted}}</p>
+            <p>{{post.content}}</p>
+            {% if not forloop.last %}
+                <hr>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="col-md-4 bg-secondary p-4 mt-4 rounded float-right">
+        <h2>Categories</h2>
+        <hr>
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">All</h5>
+                <small>3 days ago</small>
+                </div>
+                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                <small>Donec id elit non mi porta.</small>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">List group item heading</h5>
+                <small class="text-muted">3 days ago</small>
+                </div>
+                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                <small class="text-muted">Donec id elit non mi porta.</small>
+            </a>
+        </div>
+    </div>
 {% endblock content %}
