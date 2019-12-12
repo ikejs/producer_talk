@@ -2,6 +2,7 @@
 *.log
 *.pot
 *.pyc
+producer_talk/__pycache__
 __pycache__
 db.sqlite3
 media
