@@ -1,0 +1,1 @@
+Producer Talk is a blogging platform specifically for music producers to share musical ideas; chord progressions, audio plugin recommendations, and all music industry news. It is useful for both beginner and professional music producers looking for new inspiration for DAW projects. The blog is written in Django, live demo [here](https://test.com)
